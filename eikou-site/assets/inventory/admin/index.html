@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<head>
+  <meta charset="UTF-8" />
+  <title>栄興産業株式会社｜プラスチックリールの製造・修理・販売</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO 基本情報 -->
+  <meta name="description" content="栄興産業株式会社は、電線用プラスチック巻枠・リールの製造・販売を行う会社です。安定した品質と柔軟な対応力で、お客様の生産を支えます。" />
+  <meta name="keywords" content="栄興産業,巻枠,リール,プラスチックリール,電線リール,ABS,PS,PP,電線,マグネットワイヤ" />
+
+  <!-- OGP / SNS 用（後でドメイン取ったら書き換え） -->
+  <meta property="og:title" content="栄興産業株式会社｜プラスチックリールの製造・販売" />
+  <meta property="og:description" content="電線用プラスチック巻枠・リールの製造・販売を行うメーカーです。安定品質と納期対応で、お客様の生産を支えます。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/logo.png" />
+
+  <!-- セキュリティ関連 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- 簡易CSP（このHTMLだけを前提） -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' https: data:; script-src 'self'; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com;">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+
+  <!-- ファビコン（後で差し替え） -->
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #eff6ff;
+      --accent: #0ea5e9;
+      --bg: #f3f4f6;
+      --text: #111827;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.06);
+      --radius-lg: 16px;
+      --radius-full: 999px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    nav a:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .nav-contact {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 13px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .nav-contact:hover {
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto 60px;
+      padding: 16px;
+    }
+
+    .hero {
+      margin-top: 24px;
+      padding: 32px 24px;
+      background: radial-gradient(circle at top left, #dbeafe, #eff6ff);
+      border-radius: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-badge span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.3;
+    }
+
+    .hero-lead {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-ghost {
+      padding: 9px 16px;
+      border-radius: var(--radius-full);
+      border: 1px solid #d1d5db;
+      background: #fff;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .hero-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-visual {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-visual-title {
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      font-size: 11px;
+      color: #1d4ed8;
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-top: 1px dashed #e5e7eb;
+    }
+
+    .status-label {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .status-badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 500;
+    }
+
+    .section {
+      margin-top: 48px;
+    }
+
+    .section-header {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .section-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .grid-3 {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .card-list {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-list li + li {
+      margin-top: 2px;
+    }
+
+    .products {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+
+    .product-name {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .product-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .product-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4338ca;
+    }
+
+    .company-info {
+      display: grid;
+      grid-template-columns: 1.2fr 1.5fr;
+      gap: 20px;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .info-table th,
+    .info-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .info-table th {
+      width: 30%;
+      background: #f9fafb;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .info-table tr:last-child th,
+    .info-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .map-placeholder {
+      background: #e5e7eb;
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .contact-form {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+      max-width: 680px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 16px;
+    }
+
+    .form-row-full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 16px;
+      font-size: 11px;
+      color: var(--muted);
+      background: #f9fafb;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .grid-3,
+      .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .company-info {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 12px;
+      }
+
+      .hero {
+        padding: 20px 16px;
+      }
+
+      .grid-3,
+      .grid-2,
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        margin-top: 36px;
+      }
+    }
+  </style>
+</head>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-mark">E</div>
+        <div>栄興産業株式会社</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#top">ホーム</a></li>
+          <li><a href="#services">事業内容</a></li>
+          <li><a href="#strength">当社の強み</a></li>
+          <li><a href="#products">製品紹介</a></li>
+          <li><a href="#company">会社情報</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="nav-contact">お問い合わせ</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <div class="hero-badge">
+          <span>Since</span> 電線用プラスチック巻枠の専業メーカー
+        </div>
+        <h1>
+          安定品質 × 納期対応。<br />
+          頼れる電線リールのパートナー。
+        </h1>
+        <p class="hero-lead">
+          栄興産業株式会社は、電線用プラスチック巻枠・リールの製造・販売を中心に、<br />
+          海外協力工場との連携生産やリサイクルまで一貫して対応しています。
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">お問い合わせ・ご相談はこちら</a>
+          <a href="#services" class="btn-ghost">事業内容を詳しく見る</a>
+        </div>
+        <div class="hero-meta">
+          少量試作から量産・海外向け輸出まで、お気軽にご相談ください。
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-title">
+          <span>生産・在庫ダッシュボード（イメージ）</span>
+          <span style="font-size: 11px; color: #9ca3af;">※実際の画面ではありません</span>
+        </div>
+        <div class="chips">
+          <div class="chip">プラスティック製リール</div>
+          <div class="chip">木製リール</div>
+          <div class="chip">プラスティック製パレット</div>
+          <div class="chip">リサイクル対応・環境対策</div>
+          <div class="chip">海外工場連携</div>
+        </div>
+        <div class="status-row">
+          <div class="status-label">国内在庫（主要品番）</div>
+          <div class="status-badge">稼働余裕あり</div>
+        </div>
+        <div class="status-row">
+          <div class="status-label">海外出荷リードタイム</div>
+          <div style="font-size: 11px;">約○〜○週間（品番・数量により変動）</div>
+        </div>
+        <div class="status-row">
+          <div class="status-label">環境対応ステータス</div>
+          <div class="status-badge" style="background:#dbeafe;color:#1d4ed8;">
+            不含有証明・環境資料提出可能
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="section-header">
+        <div class="section-title">事業内容</div>
+        <div class="section-sub">
+          プラスチック巻枠・リールを中心に、モノづくりと物流の両面から支えます。
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-tag">01</div>
+          <h3>プラスチック巻枠・リールの製造・販売</h3>
+          <p>
+            電線・電線材料向けを中心に、各種プラスチック製リールを製造・販売しています。
+          </p>
+          <ul class="card-list">
+            <li>汎用品番（PT-25 / PT-90 / P-30 など）の安定供給</li>
+            <li>用途に応じた素材選定（ABS / PS / PP  など）</li>
+            <li>図面・仕様のご相談にも対応</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">02</div>
+          <h3>海外協力工場との連携生産</h3>
+          <p>
+            台湾・東南アジアなど協力工場とのネットワークにより、海外生産・現地供給にも対応します。
+          </p>
+          <ul class="card-list">
+            <li>海外向け輸出・現地納品のご相談</li>
+            <li>リードタイム・在庫調整のご提案</li>
+            <li>現地工場との技術連携・品質管理</li>
+            <li>海外生産による低価格化の実現</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-tag">03</div>
+          <h3>リサイクル・環境対応</h3>
+          <p>
+            使用済み巻枠の回収や、リサイクル材の活用など、環境配慮型の取り組みも行っています。
+          </p>
+          <ul class="card-list">
+            <li>使用済み巻枠の回収・修理再生</li>
+            <li>再生材利用の検討・ご提案</li>
+            <li>環境規制への対応サポート</li>
+            <li>素材ごとの丁寧な選別と粉砕処理</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strength -->
+    <section class="section" id="strength">
+      <div class="section-header">
+        <div class="section-title">栄興産業の強み</div>
+        <div class="section-sub">
+          「生産を止めない」ことを第一に考え、現場目線でご提案します。
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>01. 現場に寄り添った提案力</h3>
+          <p>
+            製造現場・物流現場の両方を理解したスタッフが、在庫・納期・仕様をトータルでご提案します。
+          </p>
+        </div>
+        <div class="card">
+          <h3>02. 少量試作から量産まで</h3>
+          <p>
+            新規立ち上げの試作から、本格量産まで、段階に応じた生産体制で柔軟に対応いたします。
+          </p>
+        </div>
+        <div class="card">
+          <h3>03. 品質・トラブル対応の経験</h3>
+          <p>
+            現場で起きる品質課題に丁寧に向き合い、再発しない仕組みづくりまで徹底します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section" id="products">
+      <div class="section-header">
+        <div class="section-title">代表的な製品</div>
+        <div class="section-sub">
+          掲載以外の品番や特注仕様についても、お気軽にお問い合わせください。
+        </div>
+      </div>
+      <div class="products">
+        <div class="product-card">
+          <div class="product-name">P-200 リール</div>
+          <div class="product-meta">材質：RENY / ABS　/ PP / PS（他ご相談）</div>
+          <p>
+            電線・マグネットワイヤ向けの標準的なプラスチックリールです。高い寸法精度と剛性が求められる用途に対応します。
+          </p>
+          <div class="product-badges">
+            <span class="badge">標準品番</span>
+            <span class="badge">高剛性</span>
+            <span class="badge">海外生産対応</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">PT-25 リール</div>
+          <div class="product-meta">材質：ABS / HIPS など</div>
+          <p>
+            小径サイズのリールとして、各種電線巻き取り用途でご採用いただいている製品です。サンプルのご用意も可能です。
+          </p>
+          <div class="product-badges">
+            <span class="badge">サンプル対応可</span>
+            <span class="badge">小ロットOK</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">その他リール・専用設計品</div>
+          <div class="product-meta">材質・仕様はご相談</div>
+          <p>
+            既存品への微調整から、新規設計まで、お客様の設備・製品に合わせたリールをご提案いたします。
+          </p>
+          <div class="product-badges">
+            <span class="badge">カスタム対応</span>
+            <span class="badge">図面検討</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quality & Environment -->
+    <section class="section" id="quality">
+      <div class="section-header">
+        <div class="section-title">品質・環境への取り組み</div>
+        <div class="section-sub">
+          お客様基準・法規制に沿った資料対応も含め、安心してお任せいただける体制を整えています。
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>品質管理</h3>
+          <p>
+            寸法・外観・強度など、用途に応じた管理項目を設定し、安定した品質を維持できるよう取り組んでいます。
+          </p>
+          <ul class="card-list">
+            <li>製造工程での検査・記録</li>
+            <li>不具合発生時の原因解析・再発防止</li>
+            <li>お客様との情報共有・改善提案</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>環境対応・書類提出</h3>
+          <p>
+            化学物質の不含有証明など、各種環境資料の提出にも対応しております。ご要求内容に応じて柔軟にご相談ください。
+          </p>
+          <ul class="card-list">
+            <li>不含有保証書の発行</li>
+            <li>各種規制対応状況の確認</li>
+            <li>使用済み巻枠のリサイクル検討</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company -->
+    <section class="section" id="company">
+      <div class="section-header">
+        <div class="section-title">会社情報</div>
+        <div class="section-sub">
+          実際の所在地・沿革・資本などは、書き換え予定。
+        </div>
+      </div>
+      <div class="company-info">
+        <table class="info-table">
+          <tr>
+            <th>会社名</th>
+            <td>栄興産業 株式会社</td>
+          </tr>
+          <tr>
+            <th>所在地</th>
+            <td>〒576-0017　大阪府交野市星田北4丁目8-3</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>代表取締役　南里 進一郎</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>19XX年X月</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>
+              プラスチック製巻枠・リールの製造・販売／海外協力工場との連携生産／
+              リサイクル・環境対応関連業務　ほか
+            </td>
+          </tr>
+          <tr>
+            <th>主要取引先</th>
+            <td>大手電線メーカー各社　ほか</td>
+          </tr>
+          <tr>
+            <th>連絡先</th>
+            <td>TEL：000-000-0000　／　FAX：000-000-0000</td>
+          </tr>
+        </table>
+        <div class="map-placeholder">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6554.205703735083!2d135.66817607559307!3d34.77818597289224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60011ec990d01731%3A0x2376004c736ea212!2z5qCE6IiI55Sj5qWt77yI5qCq77yJ!5e0!3m2!1sja!2sjp!4v1763357365776!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          Googleマップの埋め込みや、アクセス案内（最寄駅・インターなど）をここに配置できます。
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section-header">
+        <div class="section-title">お問い合わせ</div>
+        <div class="section-sub">
+          下記フォームはサンプルです。実際の送信処理は、サーバー側の設定が必要です。
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-grid">
+          <div>
+            <label for="company">会社名</label>
+            <input type="text" id="company" name="company" />
+          </div>
+          <div>
+            <label for="name">ご担当者名</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div>
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div>
+            <label for="tel">電話番号</label>
+            <input type="tel" id="tel" name="tel" />
+          </div>
+          <div class="form-row-full">
+            <label for="subject">件名</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div class="form-row-full">
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+        </div>
+        <div style="margin-top: 16px; display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
+          <p class="form-note">
+            ※個人情報は、お問い合わせへの対応以外の目的には使用いたしません。
+          </p>
+          <button type="submit" class="btn-primary">入力内容を送信する（サンプル）</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> 栄興産業株式会社. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
